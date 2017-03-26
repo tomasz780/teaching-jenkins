@@ -4,6 +4,9 @@ run_jenkins:
 		-v $$(pwd)/jenkins:/var/jenkins_home \
 		devops/jenkins
 
+start_jenkins:
+	docker start jenkins-wsb
+
 bash_jenkins:
 	docker exec -ti jenkins-wsb  /bin/bash
 
